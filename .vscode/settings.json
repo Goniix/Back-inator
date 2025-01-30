@@ -1,0 +1,9 @@
+{
+	"java.project.sourcePaths": ["WEB-INF\\src"],
+	"java.project.referencedLibraries": [
+		"c:\\Users\\drago\\tomcat\\lib\\postgresql-42.7.5.jar",
+		"c:\\Users\\drago\\tomcat\\lib\\servlet-api.jar"
+	],
+	"java.project.outputPath": "WEB-INF/classes",
+	"java.format.settings.url": ".vscode/java-formatter.xml"
+}
