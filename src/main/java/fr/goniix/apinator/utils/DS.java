@@ -2,9 +2,6 @@ package fr.goniix.apinator.utils;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.util.Properties;
@@ -42,23 +39,21 @@ public class DS implements AutoCloseable {
         return props;
     }
 
-    public boolean connect(Properties config) {
+    public void connect(Properties config) {
         String url = config.getProperty("url");
         String login = config.getProperty("login");
         String password = config.getProperty("password");
         String sqlDriver = config.getProperty("driver");
-        return connect(url, login, password, sqlDriver);
+        connect(url, login, password, sqlDriver);
     }
 
-    public boolean connect(String url, String login, String password, String driver) {
+    public void connect(String url, String login, String password, String driver) {
         try {
             Class.forName(driver);
             this.con = DriverManager.getConnection(url, login, password);
             System.out.println("DS: Connected to database!");
-            return true;
         } catch (Exception e) {
             System.out.println("DS: could not connect: " + e.getMessage());
-            return false;
         }
     }
 
