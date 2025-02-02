@@ -1,0 +1,4 @@
+driver=org.postgresql.Driver
+url=jdbc:postgresql://psqlserv.iut-infobio.priv.univ-lille1.fr/but2
+login=gabrielredouininneccoetu
+password=moi

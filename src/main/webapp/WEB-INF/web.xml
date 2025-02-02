@@ -1,0 +1,21 @@
+<web-app
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+		xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+		version="4.0">
+
+	<!-- la déclaration de la servlet -->
+	<servlet>
+		<servlet-name>connectionApi</servlet-name>
+		<!-- le nom de la classe implémentant la servlet (précédé du nom du package) -->
+		<servlet-class>fr.goniix.apinator.controller.ConnectionApi</servlet-class>
+	</servlet>
+
+	<!-- l'association de la servlet avec un motif d'URL -->
+	<servlet-mapping>
+		<servlet-name>connectionApi</servlet-name>
+		<!-- le motif d'url (par exemple *.html ou /servlet) -->
+		<url-pattern>/connection</url-pattern>
+	</servlet-mapping>
+
+</web-app>
